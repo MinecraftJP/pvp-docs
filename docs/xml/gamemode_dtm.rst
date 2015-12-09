@@ -33,7 +33,7 @@ destroyables
     "``materials``", モニュメントのMaterialを指定します。, "``Material``"
     "``completion``", 目標の達成に必要なパーセンテージを指定します。, "``整数``"
 
-destroyables
+destroyable
 ^^^^^^^^^^^^
 .. csv-table:: 
     :widths: 15, 10, 20

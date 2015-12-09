@@ -19,3 +19,4 @@ https://maps.minecraft.jp/production/
    gamemode_tdm
    gamemode_ctw
    gamemode_dtm
+   gamemode_dtc
