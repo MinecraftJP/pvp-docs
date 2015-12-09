@@ -1,0 +1,42 @@
+Destroy the Monument
+======================
+
+Destroy the Monumentゲームモードでは相手チームの破壊対象オブジェクトを破壊する事が勝利条件です。
+
+各チームには一つ以上の ``<destroyable>`` タグが必要です。
+
+また、それぞれのチームの ``<destroyable>`` タグは名前がお互い同じ名前として対応している必要があります。別々の名前は使用出来ません
+
+オブジェクト名の左右(L/R)については、攻撃側から見た左右を基準とします。
+
+また、オブジェクト名で目標の場所がはっきりする場合はLeft,Rightに統一する必要はありません。 　　　（例： Adventure Island のocean,remains等。）
+
+.. code-block:: xml
+
+	<destroyables materials="Gold Block" completion="80%">
+		<destroyable owner="red" name="Monument">
+			<!-- 破壊対象オブジェクトの範囲 -->
+			<cuboid min="1603,78,-1548" max="1607,82,-1552"/>
+		</destroyable>
+		<destroyable owner="blue" name="Monument">
+			<!-- 破壊対象オブジェクトの範囲 -->
+			<cuboid min="1556,78,-1689" max="1552,82,-1693"/>
+		</destroyable>
+	</destroyables>
+
+destroyables
+^^^^^^^^^^^^
+
+.. csv-table:: 
+    :widths: 15, 10, 20
+
+    "``materials``", モニュメントのMaterialを指定します。, "``Material``"
+    "``completion``", 目標の達成に必要なパーセンテージを指定します。, "``整数``"
+
+destroyables
+^^^^^^^^^^^^
+.. csv-table:: 
+    :widths: 15, 10, 20
+
+    "``owner``", モニュメントのオーナーを指定します。 ``<team>`` タグの ``color`` 属性に入力した値を指定してください。, "``Material``"
+    "``name``", モニュメントの名前を指定します。, "``整数``"

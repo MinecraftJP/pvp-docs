@@ -18,3 +18,4 @@ https://maps.minecraft.jp/production/
    tutorial
    gamemode_tdm
    gamemode_ctw
+   gamemode_dtm
