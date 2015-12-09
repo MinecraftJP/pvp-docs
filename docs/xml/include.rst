@@ -5,4 +5,4 @@
 
 .. code-block:: xml
 
-    <include src="classes.xml"/>
+	<include src="classes.xml"/>

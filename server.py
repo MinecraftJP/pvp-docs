@@ -3,6 +3,6 @@
 from livereload import Server, shell
 
 server = Server()
-server.watch('docs/**/*.rst', shell('gmake html', cwd='docs'))
-server.serve(open_url=False, host='0.0.0.0', root='docs/_build/html')
+server.watch('docs/**/*.rst', shell('make html', cwd='docs'))
+server.serve(open_url=False, host='localhost', root='docs/_build/html')
 

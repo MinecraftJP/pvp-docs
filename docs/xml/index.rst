@@ -14,3 +14,7 @@ https://maps.minecraft.jp/production/
 
    main
    include
+   script
+   tutorial
+   gamemode_tdm
+   gamemode_ctw
