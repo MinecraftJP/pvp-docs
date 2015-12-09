@@ -26,3 +26,4 @@ https://maps.minecraft.jp/production/
    gamemode_tntrun
    gamemode_bowspleef
    gamemode_splatt
+   gamemode_other
