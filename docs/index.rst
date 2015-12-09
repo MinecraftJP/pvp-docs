@@ -13,6 +13,7 @@ Contents:
 
    xml/index
    script/index
+   data/index
 
 .. seealso::
 

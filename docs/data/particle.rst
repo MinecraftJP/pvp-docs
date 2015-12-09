@@ -1,0 +1,39 @@
+Particle
+==============
+
+.. csv-table:: 
+
+ ``HUGE_EXPLOSION`` 
+ ``LARGE_EXPLODE`` 
+ ``FIREWORKS_SPARK`` 
+ ``BUBBLE`` 
+ ``SUSPENDED`` 
+ ``DEPTH_SUSPEND`` 
+ ``TOWNAURA`` 
+ ``CRIT`` 
+ ``MAGIC_CRIT`` 
+ ``SMOKE`` 
+ ``MOB_SPELL`` 
+ ``MOB_SPELL_AMBIENT`` 
+ ``SPELL`` 
+ ``INSTANT_SPELL`` 
+ ``WITCH_MAGIC`` 
+ ``NOTE`` 
+ ``PORTAL`` 
+ ``ENCHANTMENT_TABLE`` 
+ ``EXPLODE`` 
+ ``FLAME`` 
+ ``LAVA`` 
+ ``FOOTSTEP`` 
+ ``SPLASH`` 
+ ``LARGE_SMOKE`` 
+ ``CLOUD`` 
+ ``REDDUST`` 
+ ``SNOWBALL_POOF`` 
+ ``DRIP_WATER`` 
+ ``DRIP_LAVA`` 
+ ``SNOW_SHOVEL`` 
+ ``SLIME`` 
+ ``HEART`` 
+ ``ANGRY_VILLAGER`` 
+ ``HAPPY_VILLAGER`` 
