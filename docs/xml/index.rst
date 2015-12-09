@@ -22,3 +22,4 @@ https://maps.minecraft.jp/production/
    gamemode_dtc
    gamemode_walls
    gamemode_blitz
+   gamemode_pb
