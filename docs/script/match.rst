@@ -10,19 +10,19 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
 
    **メソッド**
 
-   .. function:: getMap()
+   .. js:function:: getMap()
 
       :doc:`Map </script/map>` オブジェクトを取得します。
 
       :returns: :doc:`Map </script/map>`
 
-   .. function:: getWorld()
+   .. js:function:: getWorld()
 
       :doc:`World </script/world>` オブジェクトを取得します。
 
       :returns: :doc:`World </script/world>`
 
-   .. function:: getServer()
+   .. js:function:: getServer()
 
       サーバ名を取得します。
 
@@ -34,18 +34,17 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
 
          match.broadcast('このサーバは' + match.getServer() + 'です。');
 
-   .. function:: getElapsed()
+   .. js:function:: getElapsed()
 
       経過時間をミリ秒で取得します。
 
       :returns: Number
 
-   .. function:: broadcast(message)
+   .. js:function:: broadcast(message)
 
       サーバ内のプレイヤーにメッセージを送信します。
 
       :param String message: メッセージ
-
       :returns: void
 
       *例*
@@ -54,7 +53,7 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
 
          match.broadcast('&6全員に表示されるメッセージです。');
 
-   .. function:: getTeam(id)
+   .. js:function:: getTeam(id)
 
       指定IDのチームを取得します。
 
@@ -69,7 +68,7 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
          var redTeam = match.getTeam('red-team');
          match.end(redTeam);
 
-   .. function:: getTeams()
+   .. js:function:: getTeams()
 
       チームを取得します。
 
@@ -85,13 +84,13 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
              match.broadcast(team.getName() + ' ' + team.getPlayerCount() + '/' + team.getMax());
          }
 
-   .. function:: getObjectives()
+   .. js:function:: getObjectives()
 
       オブジェクティブを取得します。
 
       :returns: Array[ :doc:`Objective </script/objective>` ]
 
-   .. function:: getPlayers()
+   .. js:function:: getPlayers()
 
       プレイヤーを取得します。
 
@@ -107,7 +106,7 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
              players[i].teleport(0, 60, 0);
          }
 
-   .. function:: end(team)
+   .. js:function:: end(team)
 
       特定のチームを勝者としてゲームを終了させます。チーム戦時のみ使用可能です。
 
@@ -115,7 +114,7 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
 
       :returns: void
 
-   .. function:: end(player)
+   .. js:function:: end(player)
 
       特定のプレイヤーを勝者としてゲームを終了させます。個人戦時のみ使用可能です。
 
@@ -123,7 +122,7 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
 
       :returns: void
 
-   .. function:: end()
+   .. js:function:: end()
 
       引き分けでゲームを終了させます。
 

@@ -7,20 +7,20 @@ Map
    **メソッド**
 
 
-   .. function:: getName()
+   .. js:function:: getName()
 
       マップ名を取得します。
 
       :returns: String
 
 
-   .. function:: getVersion()
+   .. js:function:: getVersion()
 
       バージョンを取得します。
 
       :returns: String
 
-   .. function:: getFilterFlag(id)
+   .. js:function:: getFilterFlag(id)
 
       :doc:`Ifフィルター </xml/filters>` のフラグを取得します。
 
@@ -28,7 +28,7 @@ Map
 
       :returns: Boolean
 
-   .. function:: setFilterFlag(id, flag)
+   .. js:function:: setFilterFlag(id, flag)
 
       :doc:`Ifフィルター </xml/filters>` のフラグを設定します。
 
@@ -37,7 +37,7 @@ Map
 
       :returns: void
 
-   .. function:: getString(locale, name)
+   .. js:function:: getString(locale, name)
 
       `<locale>` ノードで定義した多言語メッセージを取得します。
 
@@ -46,7 +46,7 @@ Map
 
       :returns: String
 
-   .. function:: getString(player, name)
+   .. js:function:: getString(player, name)
 
       `<locale>` ノードで定義した多言語メッセージを取得します。
 

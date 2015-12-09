@@ -6,7 +6,7 @@ Player
 
    **メソッド**
 
-   .. function:: getName()
+   .. js:function:: getName()
 
       プレイヤー名を取得
 

@@ -6,7 +6,7 @@ EventEmitter
 
    **メソッド**
 
-   .. function:: on(eventName, listener)
+   .. js:function:: on(eventName, listener)
 
       イベントリスナーを登録します。
 
@@ -15,7 +15,7 @@ EventEmitter
 
       :returns: void
 
-   .. function:: off(eventName)
+   .. js:function:: off(eventName)
 
       イベントリスナーを解除します。
 

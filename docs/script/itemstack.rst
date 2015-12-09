@@ -13,13 +13,13 @@ ItemStack
 
    **メソッド**
 
-   .. function:: getType()
+   .. js:function:: getType()
 
       タイプを取得します。
 
       :returns: String (Material)
 
-   .. function:: setType(type)
+   .. js:function:: setType(type)
 
       タイプを設定します。
 
@@ -27,13 +27,13 @@ ItemStack
 
       :returns: void
 
-   .. function:: getData()
+   .. js:function:: getData()
 
       データ値を取得します。
 
       :returns: Number
 
-   .. function:: setData(data)
+   .. js:function:: setData(data)
 
       データ値を設定します。
 
@@ -41,13 +41,13 @@ ItemStack
 
       :returns: void
 
-   .. function:: getName()
+   .. js:function:: getName()
 
       アイテム名を取得します。
 
       :returns: String
 
-   .. function:: setName(name)
+   .. js:function:: setName(name)
 
       アイテム名を設定します。
 
@@ -55,13 +55,13 @@ ItemStack
 
       :returns: void
 
-   .. function:: getLore()
+   .. js:function:: getLore()
 
       アイテムの説明を取得します。
 
       :returns: Array[string]
 
-   .. function:: setLore(lore)
+   .. js:function:: setLore(lore)
 
       アイテムの説明を設定します。
 
@@ -69,7 +69,7 @@ ItemStack
 
       :returns: void
 
-   .. function:: addEnchantment(enchantment, level)
+   .. js:function:: addEnchantment(enchantment, level)
 
       アイテムにエンチャントを付与します。
 
@@ -78,7 +78,7 @@ ItemStack
 
       :returns: void
 
-   .. function:: clearEnchantments()
+   .. js:function:: clearEnchantments()
 
       アイテムからエンチャントを削除します。
 

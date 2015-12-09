@@ -6,31 +6,31 @@ Objective
 
    **メソッド**
 
-   .. function:: getId()
+   .. js:function:: getId()
 
       IDを取得します。
 
       :returns: string
 
-   .. function:: getName()
+   .. js:function:: getName()
 
       オブジェクティブ名を取得します。
 
       :returns: string
 
-   .. function:: getOwner()
+   .. js:function:: getOwner()
 
       オブジェクティブのチームを取得します。
 
       :returns: :doc:`Team </script/team>`
 
-   .. function:: isCompleted()
+   .. js:function:: isCompleted()
 
       達成フラグを取得します。
 
       :returns: boolean
 
-   .. function:: isFailed()
+   .. js:function:: isFailed()
 
       失敗フラグを取得します。
 

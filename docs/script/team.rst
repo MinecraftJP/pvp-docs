@@ -6,31 +6,31 @@ Team
 
    **メソッド**
 
-   .. function:: getId()
+   .. js:function:: getId()
 
       IDを取得します。
 
       :returns: String
 
-   .. function:: getName()
+   .. js:function:: getName()
 
       チーム名を取得します。
 
       :returns: String
 
-   .. function:: getDisplayName()
+   .. js:function:: getDisplayName()
 
       色つきのチーム名を取得します。
 
       :returns: String
 
-   .. function:: getAlias()
+   .. js:function:: getAlias()
 
       別名を取得します。
 
       :returns: String
 
-   .. function:: setName(name)
+   .. js:function:: setName(name)
 
       別名を設定します。
 
@@ -38,25 +38,25 @@ Team
 
       :returns: void
 
-   .. function:: getPlayerCount()
+   .. js:function:: getPlayerCount()
 
       チームのプレイヤー人数を取得します。
 
       :returns: Number
 
-   .. function:: getMax()
+   .. js:function:: getMax()
 
       チームの最大人数を取得します。
 
       :returns: Number
 
-   .. function:: getPlayers()
+   .. js:function:: getPlayers()
 
       チームのプレイヤーを取得します。
 
       :returns: Array[ :doc:`Player </script/player>` ]
 
-   .. function:: sendMessage(message)
+   .. js:function:: sendMessage(message)
 
       チームにメッセージを送信します。
 
@@ -64,7 +64,7 @@ Team
 
       :returns: void
 
-   .. function:: sendLocaleMessage(name)
+   .. js:function:: sendLocaleMessage(name)
 
       チームに `<locale>` で定義した多言語メッセージを送信します。
 
@@ -72,7 +72,7 @@ Team
 
       :returns: void
 
-   .. function:: incrementScore(value)
+   .. js:function:: incrementScore(value)
 
       チームのスコアを加算します。
 
@@ -80,7 +80,7 @@ Team
 
       :returns: void
 
-   .. function:: decrementScore(value)
+   .. js:function:: decrementScore(value)
 
       チームのスコアを減算します。
 
@@ -88,13 +88,13 @@ Team
 
       :returns: void
 
-   .. function:: getKills()
+   .. js:function:: getKills()
 
       チームのキル数を取得します。
 
       :returns: Number
 
-   .. function:: getDeaths()
+   .. js:function:: getDeaths()
 
       チームのデス数を取得します。
 
