@@ -13,3 +13,4 @@ https://maps.minecraft.jp/production/
    :maxdepth: 2
 
    main
+   include
