@@ -24,3 +24,4 @@ https://maps.minecraft.jp/production/
    gamemode_blitz
    gamemode_pb
    gamemode_tntrun
+   gamemode_bowspleef
