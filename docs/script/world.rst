@@ -2,6 +2,10 @@
 World
 #############
 
+Worldオブジェクトは主にブロック操作、Entity関連、ワールド設定などを行う事が出来ます。
+
+Worldオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジェクトを継承しています。
+
 .. js:class:: World()
 
    **メソッド**
