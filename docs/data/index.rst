@@ -12,3 +12,5 @@ Data Info
    effect
    particle
    damagecause
+   dyecolor
+   chatcolor

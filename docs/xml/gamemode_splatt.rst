@@ -20,7 +20,7 @@ Splattゲームモードは各チームの色でブロックを塗りつぶし�
     :header: "属性", "説明", "値"
     :widths: 15, 10, 20
 
-    "``materials``", インクを塗ることが出来るブロックを指定します。「;」区切りで複数指定する事が可能です。指定可能なブロックは ``WOOL`` |comma| ``STAINED_CLAY`` |comma| ``STAINED_GLASS`` です。未指定の場合は全ての指定可能なブロックが設定されます。, "``Material``"
-    "``hide-progress-time``", 指定時間になるとナワバリの範囲をサイドバーから非表示にします。, "``Time Period``"
+    "``materials``", インクを塗ることが出来るブロックを指定します。「;」区切りで複数指定する事が可能です。指定可能なブロックは ``WOOL`` |comma| ``STAINED_CLAY`` |comma| ``STAINED_GLASS`` です。未指定の場合は全ての指定可能なブロックが設定されます。, "`Material <../data/material.html>`_"
+    "``hide-progress-time``", 指定時間になるとナワバリの範囲をサイドバーから非表示にします。, "時間"
 
 .. |comma| replace:: ,
