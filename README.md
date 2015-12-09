@@ -1,14 +1,24 @@
 # Japan Minecraft PvP Documentation
 
+https://pvp-docs.minecraft.jp/
+
+## Requirements
+
+  * Python 2.7+
+  * pip
+  * Sphinx
+  * livereload
+
 ## Setup
 
 ```
-pip install sphinx sphinx-autobuild livereload
+pip install sphinx livereload
+cd docs; make html
 ```
 
 ## Usage
 
 ```
-./server.py
+./server_local.py
 ```
 
