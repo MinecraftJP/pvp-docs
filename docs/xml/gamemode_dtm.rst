@@ -24,19 +24,19 @@ Destroy the Monumentゲームモードでは相手チームの破壊対象オブ
 		</destroyable>
 	</destroyables>
 
-destroyables
-^^^^^^^^^^^^
+destroyablesノードの属性
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table:: 
     :widths: 15, 10, 20
 
-    "``materials``", モニュメントのMaterialを指定します。, "`Material <../data/material.html>`_"
-    "``completion``", 目標の達成に必要なパーセンテージを指定します。, "整数"
+    "``materials``", モニュメントのMaterialを指定します。, ":doc:`Material </data/material>`"
+    "``completion``", 目標の達成に必要なパーセンテージを指定します。, "`Number`"
 
-destroyable
-^^^^^^^^^^^^
+destroyableノードの属性
+^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table:: 
     :widths: 15, 10, 20
 
-    "``owner``", モニュメントのオーナーを指定します。 ``<team>`` タグの ``color`` 属性に入力した値を指定してください。, "`Material <../data/material.html>`_"
-    "``name``", モニュメントの名前を指定します。, "整数"
+    "``owner``", モニュメントのオーナーを指定します。 ``<team>`` タグの ``color`` 属性に入力した値を指定してください。, ":doc:`Material </data/material>`"
+    "``name``", モニュメントの名前を指定します。, "`Number`"
