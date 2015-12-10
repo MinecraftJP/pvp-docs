@@ -27,3 +27,25 @@ https://maps.minecraft.jp/production/
    gamemode_bowspleef
    gamemode_splatt
    gamemode_other
+   filters
+   regions
+   teams
+   kits
+   classes
+   items
+   potions
+   repair_remove
+   disabledamage
+   spawns
+   tnt
+   killreward
+   portals
+   scoreboxes
+   mobs
+   shops
+   other
+   locales
+   blockdrops
+   renewables
+   enderblocks
+   righttools
