@@ -14,3 +14,4 @@ Data Info
    damagecause
    dyecolor
    chatcolor
+   timeperiod
