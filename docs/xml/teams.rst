@@ -22,12 +22,13 @@
    ``max``, チームに参加可能な最大人数を指定します。
 
 .. code-block::
+
    <!-- 例:4チームに設定した場合 -->
    <teams>
      <team color="blue" max="12">Blue Team</team>
      <team color="red" max="12">Red Team</team>
-　　 <team color="green" max="12">Green Team</team>
-　　 <team color="yellow" max="12">Yellow Team</team>
+     <team color="green" max="12">Green Team</team>
+     <team color="yellow" max="12">Yellow Team</team>
    </teams>
 
 .. warning::
