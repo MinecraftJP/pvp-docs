@@ -355,3 +355,7 @@ epub_exclude_files = ['search.html']
 
 # If false, no index is generated.
 #epub_use_index = True
+
+rst_prolog = u"""
+.. include:: /definitions.txt
+"""
