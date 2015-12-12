@@ -32,10 +32,12 @@
 <item>ノードの属性
 ^^^^^^^^^^^^^^^^^^
 
+.. |price_string| replace:: ``material,必要数``
+
 .. csv-table::
    :header: ノード, 説明, 値
 
-   ``price``, このアイテムの価格を ``material,必要数`` の形式で記入します。, Price String
+   ``price``, このアイテムの価格を |price_string| の形式で記入します。, Price String
    ``slot``, ショップウィンドウ内のアイテム位置です。, Number
    ``filter``, アイテム単位のフィルターです。フィルターによりブロックされた場合はアイテムが表示されません。	:doc:`Filter Name </xml/filters>`
 

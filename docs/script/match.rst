@@ -76,7 +76,7 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
 
       *例*
 
-      .. code-block::
+      .. code-block:: javascript
 
          var teams = match.getTeams();
          for (var i = 0; i < teams.length; i++) {
