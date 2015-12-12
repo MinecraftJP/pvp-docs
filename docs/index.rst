@@ -6,7 +6,7 @@
 Welcome to Japan Minecraft PvP Documentation's documentation!
 =============================================================
 
-Contents:
+コンテンツ:
 
 .. toctree::
    :maxdepth: 2
@@ -17,13 +17,6 @@ Contents:
 
 .. seealso::
 
-   :doc:`contents`
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   * :doc:`contents`
+   * :ref:`genindex`
 
