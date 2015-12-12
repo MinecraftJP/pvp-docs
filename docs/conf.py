@@ -15,7 +15,6 @@
 import sys
 import os
 import shlex
-import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -109,10 +108,7 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#html_theme = 'default'
-html_theme = "sphinx_rtd_theme"
-
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -142,8 +138,6 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-html_style = 'css/style.css'
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -361,3 +355,24 @@ epub_exclude_files = ['search.html']
 rst_prolog = u"""
 .. include:: /definitions.txt
 """
+
+# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    # Override default css to get a larger width for local build
+    def setup(app):
+        #app.add_javascript("custom.js")
+        app.add_stylesheet('css/style.css')
+else:
+    # Override default css to get a larger width for ReadTheDoc build
+    html_context = {
+        'css_files': [
+            'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+            'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+            '_static/css/style.css',
+        ],
+    }
