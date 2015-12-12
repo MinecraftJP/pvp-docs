@@ -20,6 +20,6 @@
    :header: 属性, 説明, 値
 
    ``value``, 獲得する得点, Number
-   ``team``, 獲得するチーム, :doc:`Team Name </xml/team>`
-   ``filter``, フィルター, :doc:`Filter Name </xml/filter>`
+   ``team``, 獲得するチーム, :doc:`Team Name </xml/teams>`
+   ``filter``, フィルター, :doc:`Filter Name </xml/filters>`
    ``cooldown``, 次に獲得可能までの時間, Number

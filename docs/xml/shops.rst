@@ -26,7 +26,7 @@
    :header: 属性, 説明, 値
 
    ``name``, ショップの名前です。localesノードにより多言語化可能です。, String
-   ``filter``, ショップ利用時にチェックされるフィルターです。フィルターによりブロックされた場合はショップが利用出来ません。	:doc:`Filter Name </xml/filter>`
+   ``filter``, ショップ利用時にチェックされるフィルターです。フィルターによりブロックされた場合はショップが利用出来ません。	:doc:`Filter Name </xml/filters>`
    ``filter-message``, フィルター適用時に表示されるメッセージです。, String
 
 <item>ノードの属性
@@ -37,5 +37,5 @@
 
    ``price``, このアイテムの価格を ``material,必要数`` の形式で記入します。, Price String
    ``slot``, ショップウィンドウ内のアイテム位置です。, Number
-   ``filter``, アイテム単位のフィルターです。フィルターによりブロックされた場合はアイテムが表示されません。	:doc:`Filter Name </xml/filter>`
+   ``filter``, アイテム単位のフィルターです。フィルターによりブロックされた場合はアイテムが表示されません。	:doc:`Filter Name </xml/filters>`
 

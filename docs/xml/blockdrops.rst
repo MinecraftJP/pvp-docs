@@ -45,14 +45,14 @@
 .. csv-table::
    :header: ノード, 説明, 値
 
-   ``<region>``, ルール適用対象のリージョン, :doc:`Region </xml/region>`
-   ``<filter>``, ルール適用対象ブロックのフィルター, :doc:`Filter </xml/filter>`
-   ``<drops>``, ドロップするアイテム(複数指定可能です。), :doc:`Item </xml/item>`
+   ``<region>``, ルール適用対象のリージョン, :doc:`Region </xml/regions>`
+   ``<filter>``, ルール適用対象ブロックのフィルター, :doc:`Filter </xml/filters>`
+   ``<drops>``, ドロップするアイテム(複数指定可能です。), :doc:`Item </xml/items>`
    ``<experience>``, ドロップする経験値, Number
-   ``<replacement>``, ブロックの破壊後に置換するブロック, :doc:`Material <data/material>`
+   ``<replacement>``, ブロックの破壊後に置換するブロック, :doc:`Material </data/material>`
    ``<direct>``, trueの場合ドロップアイテム、経験値を直接プレイヤーのインベントリにいれます。, Boolean
    ``<wrongtool>``, trueの場合ブロックに対する適正ツールではない場合もアイテムをドロップします。, Boolean
-   ``<restore-time>``, 指定されている場合、一定時間後にブロックを元に戻します。, :doc:`TimePeriod <data/timeperiod>`
+   ``<restore-time>``, 指定されている場合、一定時間後にブロックを元に戻します。, :doc:`TimePeriod </data/timeperiod>`
    ``<grow>``, <restore-time>によるブロック復元時に成長可能なブロックの場合は段階的に成長します。(現在は小麦のみ対応), Boolean
    ``<fall-chance>``, ブロックの爆発時に爆発デブリになる確率, Number (0-1.0)
    ``<land-chance>``, デブリが地面に付いたときにブロックに戻る確率, Number (0-1.0)

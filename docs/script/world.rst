@@ -251,7 +251,7 @@ Worldオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
       :param Number x: X座標
       :param Number y: Y座標
       :param Number z: Z座標
-      :param String entityType: :doc:`EntityType </data/entitytype>`
+      :param String entityType: :doc:`EntityType </data/entity_type>`
       :returns: void
 
       *例*

@@ -34,9 +34,9 @@
 .. csv-table::
    :header: ノード, 説明, 値
 
-   ``<region>``, 復元対象のリージョン, :doc:`Region </xml/region>`
+   ``<region>``, 復元対象のリージョン, :doc:`Region </xml/regions>`
    ``<renew>``, 復元対象のブロック, :doc:`Material </data/material>`
    ``<replace>``, 復元時に置き換え可能なブロック, :doc:`Material </data/material>`
-   ``<renew-filter>``, 復元対象ブロックのフィルター。 `<renew>` とは同時に使用出来ません。, :doc:`Filter </xml/filter>`
-   ``<replace-filter>``, 	復元時に置き換え可能なブロックのフィルター。 `<replace>` とは同時に使用出来ません。, :doc:`Filter </xml/filter>`
+   ``<renew-filter>``, 復元対象ブロックのフィルター。 `<renew>` とは同時に使用出来ません。, :doc:`Filter </xml/filters>`
+   ``<replace-filter>``, 	復元時に置き換え可能なブロックのフィルター。 `<replace>` とは同時に使用出来ません。, :doc:`Filter </xml/filters>`
 

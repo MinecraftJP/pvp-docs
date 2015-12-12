@@ -43,8 +43,8 @@
    ``<team>team name</team>``, チームで一致します。
    ``<block>block name</block>``, ブロックタイプで一致します。指定可能なブロック名は :doc:`Material </data/material>` をご覧ください。ダメージ値を指定する事も出来ます。例:<block>sand:2</block>
    ``<spawn>spawn reason</spawn>``, スポーン理由で一致します。指定可能な値は :doc:`SpawnReason </data/spawnreason>` をご覧ください。
-   ``<entity>entity type</entity>``, Entityのタイプで一致します。指定可能な値は :doc:`EntityType </data/entitytype>` をご覧ください。
-   ``<mob>creature type</mob>``, Mobのタイプで一致します。指定可能な値は :doc:`EntityType </data/entitytype>` のうちモンスターのみです。
+   ``<entity>entity type</entity>``, Entityのタイプで一致します。指定可能な値は :doc:`EntityType </data/entity_type>` をご覧ください。
+   ``<mob>creature type</mob>``, Mobのタイプで一致します。指定可能な値は :doc:`EntityType </data/entity_type>` のうちモンスターのみです。
    ``<kill-streak count="5"/>``, 連続キル数が特定の数または範囲で一致します。
    ``<class>class name</class>``, 特定のクラスを選択している時に一致します。
    ``<crouching/>``, しゃがんでいる時に一致します。
