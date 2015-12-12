@@ -84,6 +84,7 @@ applyノードの属性
 
 .. csv-table::
    :header: 属性, 説明, 値
+   :widths: 10,75,15
 
    ``enter``, リージョンへの侵入時にフィルターを適用します。, :doc:`Filter Name </xml/filters>`
    ``leave``, リージョンからの離脱時にフィルターを適用します。, :doc:`Filter Name </xml/filters>`
@@ -92,7 +93,7 @@ applyノードの属性
    ``block-break``, リージョン内でのブロック破壊時にフィルターを適用します。, :doc:`Filter Name </xml/filters>`
    ``use``, リージョン内での右クリック時にフィルターを適用します。, :doc:`Filter Name </xml/filters>`
    ``kit``, リージョンへのプレイヤー侵入時にキットを与えます。, :doc:`Kit Name </xml/kits>`
-   ``velocity``, リージョンへのプレイヤー侵入時にVelocityを変更します。, X,Y,Z
+   ``velocity``, リージョンへのプレイヤー侵入時にVelocityを変更します。, X |comma| Y |comma| Z
    ``filter``, kit使用時のフィルターです。, :doc:`Filter Name </xml/filters>`
    ``message``, フィルターが適用された場合にプレイヤーに表示するメッセージです。, 文字列
 

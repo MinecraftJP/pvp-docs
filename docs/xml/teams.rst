@@ -17,6 +17,7 @@
 
 .. csv-table::
    :header: 属性, 説明
+   :widths: 20,80
 
    ``color``, チームの色です。指定可能な色は :doc:`ChatColor </data/chatcolor>` をご覧ください。
    ``max``, チームに参加可能な最大人数を指定します。

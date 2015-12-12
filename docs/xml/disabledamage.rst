@@ -17,7 +17,7 @@
 
    BLOCK_EXPLOSION, ブロックの爆発
    CONTACT, サボテンとの接触
-   CUSTOM , カスタムダメージ
+   CUSTOM, カスタムダメージ
    DROWNING, 水中の酸欠
    ENTITY_ATTACK, Entityの攻撃
    ENTITY_EXPLOSION, Entityの爆発
@@ -36,5 +36,5 @@
    THORNS, 棘エンチャント
    SUICIDE, 自殺
    VOID, Voidダメージ(使用しないでください。)
-   WITHER, Witherによる毒効果,
+   WITHER, Witherによる毒効果
 

@@ -44,6 +44,7 @@
 
 .. csv-table::
    :header: ノード, 説明, 値
+   :widths: 10,80,10
 
    ``<region>``, ルール適用対象のリージョン, :doc:`Region </xml/regions>`
    ``<filter>``, ルール適用対象ブロックのフィルター, :doc:`Filter </xml/filters>`

@@ -21,6 +21,7 @@
 
 .. csv-table::
    :header: 属性, 説明, 値, デフォルト
+   :widths: 10,60,15,15
 
    ``region``, 復元対象のリージョン名, `String`
    ``rate``, 毎秒のブロック復元数, `Number`, 1
@@ -33,6 +34,7 @@
 
 .. csv-table::
    :header: ノード, 説明, 値
+   :widths: 10,80,10
 
    ``<region>``, 復元対象のリージョン, :doc:`Region </xml/regions>`
    ``<renew>``, 復元対象のブロック, :doc:`Material </data/material>`

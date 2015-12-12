@@ -29,6 +29,7 @@
 
 .. csv-table::
    :header:  属性, 説明, 値
+   :widths: 10,75,15
 
    ``slot``, アイテムが配置されるインベントリ内の位置を指定します。|br| |inventory_image|, 整数
    ``amount``, アイテムの数を1～64個の範囲内で指定します。, 1～64
@@ -55,6 +56,7 @@
 
 .. csv-table::
    :header: 属性, 説明, 値
+   :widths: 10,75,15
 
    ``potion_name``, ポーション効果タイプ, :doc:`PotionEffectType </data/potioneffecttype>`
    ``duration``, ポーション効果時間(tick), 整数
@@ -71,6 +73,7 @@
 
 .. csv-table::
    :header: 属性, 説明
+   :widths: 20,80
 
    ``color``, 革製の装備の着色に使用します。カラーコード
 

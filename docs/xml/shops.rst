@@ -24,6 +24,7 @@
 
 .. csv-table::
    :header: 属性, 説明, 値
+   :widths: 10,75,15
 
    ``name``, ショップの名前です。localesノードにより多言語化可能です。, String
    ``filter``, ショップ利用時にチェックされるフィルターです。フィルターによりブロックされた場合はショップが利用出来ません。	:doc:`Filter Name </xml/filters>`
@@ -36,6 +37,7 @@
 
 .. csv-table::
    :header: ノード, 説明, 値
+   :widths: 10,75,15
 
    ``price``, このアイテムの価格を |price_string| の形式で記入します。, Price String
    ``slot``, ショップウィンドウ内のアイテム位置です。, Number

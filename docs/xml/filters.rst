@@ -64,6 +64,7 @@
 
 .. csv-table::
    :header: 属性, 説明, 値
+   :widths: 10,80,10
 
    ``count``, 連続キルがこの値になっている時に一致します。 ``min`` 及び ``max`` と組み合わせて使う事は出来ません。, 整数
    ``repeat``, trueの場合は連続キルが ``count`` の倍数毎に一致するようになります。, Boolean
@@ -88,6 +89,7 @@
 
 .. csv-table::
    :header: 属性, 説明
+   :widths: 10,80,10
 
    ``min``, ゲーム経過時間がこの値以上になっている時に一致します。, :doc:`TimePeriod </data/timeperiod>`
    ``max``, ゲーム経過時間がこの値以下になっている時に一致します。, :doc:`TimePeriod </data/timeperiod>`
@@ -116,6 +118,7 @@ Voidフィルターは ``Y=0`` のブロックをチェックし、 ``AIR`` の�
 
 .. csv-table::
    :header: フィルター, 説明
+   :widths: 20,80
 
    ``<all></all>``, AND条件です。全ての子要素のフィルターが一致した時に一致します。
    ``<not></not>``, NOT条件です。全ての子要素のフィルターが一致しない場合に一致します。

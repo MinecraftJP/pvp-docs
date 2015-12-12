@@ -12,6 +12,7 @@
 
 .. csv-table::
    :header: 属性, 説明
+   :widths: 20, 80
 
    ``duration``, 持続時間を秒で指定します。無制限にするには ``oo`` を指定します。
    ``amplifier``, 効果の強さを指定します。
