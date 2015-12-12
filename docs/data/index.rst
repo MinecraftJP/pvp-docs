@@ -7,6 +7,7 @@
    :maxdepth: 2
 
    material
+   enchantment
    entity_type
    sound
    effect
@@ -14,4 +15,6 @@
    damagecause
    dyecolor
    chatcolor
+   potioneffecttype
+   spawnreason
    timeperiod
