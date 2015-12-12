@@ -13,8 +13,8 @@ Splattゲームモードは各チームの色でブロックを塗りつぶし�
 	</splatt>
 	<include src="splatt.xml"/>
 
-<splatt>タグの属性
-------------------
+<splatt>ノードの属性
+^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table:: 
     :header: "属性", "説明", "値"

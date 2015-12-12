@@ -3,9 +3,9 @@ Destroy the Monument
 
 Destroy the Monumentゲームモードでは相手チームの破壊対象オブジェクトを破壊する事が勝利条件です。
 
-各チームには一つ以上の ``<destroyable>`` タグが必要です。
+各チームには一つ以上の ``<destroyable>`` ノードが必要です。
 
-また、それぞれのチームの ``<destroyable>`` タグは名前がお互い同じ名前として対応している必要があります。別々の名前は使用出来ません
+また、それぞれのチームの ``<destroyable>`` ノードは名前がお互い同じ名前として対応している必要があります。別々の名前は使用出来ません
 
 オブジェクト名の左右(L/R)については、攻撃側から見た左右を基準とします。
 
@@ -24,8 +24,8 @@ Destroy the Monumentゲームモードでは相手チームの破壊対象オブ
 		</destroyable>
 	</destroyables>
 
-destroyablesノードの属性
-^^^^^^^^^^^^^^^^^^^^^^^^
+<destroyables>ノードの属性
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table:: 
     :widths: 15, 10, 20
@@ -33,10 +33,10 @@ destroyablesノードの属性
     "``materials``", モニュメントのMaterialを指定します。, ":doc:`Material </data/material>`"
     "``completion``", 目標の達成に必要なパーセンテージを指定します。, "`Number`"
 
-destroyableノードの属性
-^^^^^^^^^^^^^^^^^^^^^^^^
+<destroyable>ノードの属性
+^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table:: 
     :widths: 15, 10, 20
 
-    "``owner``", モニュメントのオーナーを指定します。 ``<team>`` タグの ``color`` 属性に入力した値を指定してください。, ":doc:`Material </data/material>`"
+    "``owner``", モニュメントのオーナーを指定します。 ``<team>`` ノードの ``color`` 属性に入力した値を指定してください。, ":doc:`Material </data/material>`"
     "``name``", モニュメントの名前を指定します。, "`Number`"

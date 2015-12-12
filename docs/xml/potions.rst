@@ -7,8 +7,8 @@
 
    <potion duration="4" amplifier="100">slow</potion>
 
-<potion>タグの属性
-^^^^^^^^^^^^^^^^^^
+<potion>ノードの属性
+^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
    :header: 属性, 説明

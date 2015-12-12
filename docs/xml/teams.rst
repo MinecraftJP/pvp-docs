@@ -12,8 +12,8 @@
      <team color="red" max="24">Red Team</team>
    </teams>
 
-<team>タグの属性
-^^^^^^^^^^^^^^^^
+<team>ノードの属性
+^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
    :header: 属性, 説明
