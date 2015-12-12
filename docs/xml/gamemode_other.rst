@@ -6,7 +6,9 @@ Ghost Squadron
 
 Ghost Squadronモードはすべてのプレイヤーが常時透明化されます。
 
-.. js:data:: Ghost Squadronモードは他のゲームモードと組み合わせる必要があります。
+.. warning::
+
+   Ghost Squadronモードは他のゲームモードと組み合わせる必要があります。
 
 .. code-block:: xml
 
@@ -23,7 +25,9 @@ Rage
 
 Rageモードでは体力に関係なく攻撃が命中するとkillになります。プレイヤー以外のダメージはその限りではありません
 
-.. js:data:: Rageモードは他のゲームモードと組み合わせる必要があります。
+.. warning::
+
+   Rageモードは他のゲームモードと組み合わせる必要があります。
 
 .. code-block:: xml
 

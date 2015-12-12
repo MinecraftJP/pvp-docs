@@ -16,36 +16,7 @@ https://maps.minecraft.jp/production/
    include
    script
    tutorial
-   gamemode_tdm
-   gamemode_ctw
-   gamemode_dtm
-   gamemode_dtc
-   gamemode_walls
-   gamemode_blitz
-   gamemode_pb
-   gamemode_tntrun
-   gamemode_bowspleef
-   gamemode_splatt
-   gamemode_other
-   filters
-   regions
-   teams
-   kits
-   classes
-   items
-   potions
-   repair_remove
-   disabledamage
-   spawns
-   tnt
-   killreward
-   portals
-   scoreboxes
-   mobs
-   shops
-   other
-   locales
-   blockdrops
-   renewables
-   enderblocks
-   righttools
+   gamemode
+   filters_regions
+   game_settings
+   block_settings
