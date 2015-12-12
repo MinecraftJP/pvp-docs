@@ -25,5 +25,5 @@ Capture the Woolゲームモードは相手チームの陣地から羊毛を奪�
     :header: "属性", "説明", "値"
     :widths: 15, 10, 20
 
-    "``team``", 羊毛を設置する側のチーム名です。, "`Chat Color <../data/chatcolor.html>`_"
-    "``color``", 設置する羊毛の色です。羊毛の色はDyeColorをご覧ください。, "`Dye Color <../data/dyecolor.html>`_"
+    "``team``", 羊毛を設置する側のチーム名です。, :doc:`Chat Color </data/chatcolor>`
+    "``color``", 設置する羊毛の色です。羊毛の色はDyeColorをご覧ください。, :doc:`Dye Color </data/dyecolor>`

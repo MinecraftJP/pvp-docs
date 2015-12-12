@@ -21,7 +21,7 @@
    ``color``, チームの色です。指定可能な色は :doc:`ChatColor </data/chatcolor>` をご覧ください。
    ``max``, チームに参加可能な最大人数を指定します。
 
-.. code-block::
+.. code-block:: xml
 
    <!-- 例:4チームに設定した場合 -->
    <teams>

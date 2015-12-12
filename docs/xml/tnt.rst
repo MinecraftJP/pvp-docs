@@ -4,6 +4,7 @@ TNT
 TNTブロックに関する設定を行います。
 
 .. code-block:: xml
+
    <tnt>
      <!-- ブロックへのダメージを無効化 -->
      <blockdamage>off</blockdamage>

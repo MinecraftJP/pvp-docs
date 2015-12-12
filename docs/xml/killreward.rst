@@ -5,6 +5,7 @@
 条件を設定するために :doc:`<filter> </xml/filters>` を指定する事も出来ます。
 
 .. code-block:: xml
+
    <killreward>
        <item amount="1">diamond</item>
    </killreward>
