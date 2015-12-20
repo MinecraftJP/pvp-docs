@@ -2,6 +2,8 @@
 Material
 ===========
 
+|table_start|
+
 .. csv-table:: 
 
  ``AIR`` , 0 
@@ -347,3 +349,5 @@ Material
  ``RECORD_10`` , 2265 
  ``RECORD_11`` , 2266 
  ``RECORD_12`` , 2267 
+
+|table_end|

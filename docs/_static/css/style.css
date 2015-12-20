@@ -3,3 +3,9 @@
 .wy-table-responsive table td, .wy-table-responsive table th {
     white-space: normal;
 }
+
+.table-filter input[type=text] {
+    width: 100%;
+    border-radius: 5px;
+    padding: 6px 12px;
+}

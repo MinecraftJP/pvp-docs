@@ -1,6 +1,8 @@
 Enchantment
 ===========
 
+|table_start|
+
 .. csv-table::
    :header: 値, 説明
    :widths: 20, 80
@@ -30,3 +32,6 @@ Enchantment
    ``SILK_TOUCH``, Allows blocks to drop themselves instead of fragments (for example |comma| stone instead of cobblestone)
    ``THORNS``, Damages the attacker
    ``WATER_WORKER``, Increases the speed at which a player may mine underwater
+
+|table_end|
+

@@ -1,6 +1,8 @@
 PotionEffectType
 ================
 
+|table_start|
+
 .. csv-table::
    :header: 値, 説明
    :widths: 20, 80
@@ -29,3 +31,4 @@ PotionEffectType
    ``WEAKNESS``, Decreases damage dealt by an entity.
    ``WITHER``, Deals damage to an entity over time and gives the health to the shooter.
 
+|table_end|
