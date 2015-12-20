@@ -33,6 +33,7 @@ GET players/:id
    ctw, CTWゲームモード統計
    factions, Factions統計
    kills, キル、デスエントリー
+   matches, ゲーム履歴
    objective, Objectiveゲームモード統計
    paintball, Paintballゲームモード統計
    splatt, Splattゲームモード統計

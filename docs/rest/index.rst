@@ -91,14 +91,14 @@ Authorization Codeによる認証時には、対象のユーザ単位で1時間�
 
 .. code-block:: http
 
-   X-Ratelimit-Limit: 100
-   X-Ratelimit-Remaining: 97
-   X-Ratelimit-Reset: 1450580967
+   X-RateLimit-Limit: 100
+   X-RateLimit-Remaining: 97
+   X-RateLimit-Reset: 1450580967
 
 
-* X-Ratelimit-Limit 1時間あたりのリクエスト可能数
-* X-Ratelimit-Remaining レート制限までのリクエスト数
-* X-Ratelimit-Reset レート制限リセット時間(UNIXタイムスタンプ)
+* X-RateLimit-Limit 1時間あたりのリクエスト可能数
+* X-RateLimit-Remaining レート制限までのリクエスト数
+* X-RateLimit-Reset レート制限リセット時間(UNIXタイムスタンプ)
 
 ステータスコード
 ================
@@ -114,7 +114,7 @@ Authorization Codeによる認証時には、対象のユーザ単位で1時間�
    401, Unauthorized - Client IDまたはアクセストークンがリクエストに含まれていないか有効ではありません。
    403, Forbidden - 認可されたスコープ範囲外へのリクエストです。
    404, Not Found - リクエストされたリソースが見つかりませんでした。
-   429, Too Many Requests - 利用制限が適用されました。
+   429, Too Many Requests - レート制限が適用されました。
    500, Internal Server Error - APIサーバで問題が発生しています。
    502, Bad Gateway - 一時的にAPIサーバに接続出来なくなっています。
    503, Server Unavailable - 一時的にAPIサーバに接続出来なくなっています。
