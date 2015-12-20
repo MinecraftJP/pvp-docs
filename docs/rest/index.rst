@@ -14,7 +14,7 @@ Japan Minecraft PvP APIはRESTful形式でゲームのデータをJSONレスポ�
 利用可能な認証
 
 .. csv-table::
-   :header: 認証, ユーザのプライベートデータ取得, Client Secretの使用, 利用制限の上限増加
+   :header: 認証, ユーザのプライベートデータ取得, Client Secretの使用, レート制限の上限増加
 
    Authorization Code, Yes, Yes, Yes
    Client Credentials, No, Yes, Yes
@@ -54,14 +54,24 @@ Client Credentials アクセストークンの取得例
 
    {"access_token":"03807cb390319329bdf6c777d4dfae9c0d3b3c35","expires_in":3600,"token_type":"bearer","scope":null}
 
-利用制限 (Rate Limit)
-======================
+レート制限 (Rate Limit)
+=======================
 
-Client IDを含む非認証リクエストでは低めの利用制限が適用されます。
+Client IDによる認証時には、アプリ単位で1時間に50リクエストを送信する事が出来ます。
+Client Credentialsによる認証時には、アプリ単位で1時間に100リクエストを送信する事が出来ます。
+Authorization Codeによる認証時には、対象のユーザ単位で1時間に100リクエストを送信する事が出来ます。
 
-Client IDまたはClient Credentialsアクセストークンによるリクエストの場合はClient ID、Authorization Codeアクセストークンによるリクエストの場合は該当ユーザに対してAPIの利用制限が適用されます。
+認証別のレート制限値
 
-利用制限を超えるとステータスコード ``429 Too Many Requests`` と下記の内容が返されます。
+.. csv-table::
+:header: 認証, 1時間あたりのリクエスト可能数, レート制限適用対象
+
+   Authorization Code, 100, User
+   Client Credentials, 100, App
+   Client ID, 50, App
+
+
+レート制限を超えるとステータスコード ``429 Too Many Requests`` と下記の内容が返されます。
 
 .. code-block:: json
 
@@ -70,7 +80,7 @@ Client IDまたはClient Credentialsアクセストークンによるリクエ�
        error_description: "Rate limit exceeded"
    }
 
-現在の利用制限の状態はリクエスト時のレスポンスヘッダーに追加されます。
+現在のレート制限の状態はリクエスト時のレスポンスヘッダーに追加されます。
 
 .. code-block:: http
 
@@ -80,8 +90,8 @@ Client IDまたはClient Credentialsアクセストークンによるリクエ�
 
 
 * X-Ratelimit-Limit 1時間あたりのリクエスト可能数
-* X-Ratelimit-Remaining 利用制限までのリクエスト数
-* X-Ratelimit-Reset 利用制限リセット時間(UNIXタイムスタンプ)
+* X-Ratelimit-Remaining レート制限までのリクエスト数
+* X-Ratelimit-Reset レート制限リセット時間(UNIXタイムスタンプ)
 
 ステータスコード
 ================
