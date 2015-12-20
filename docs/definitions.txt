@@ -1,5 +1,15 @@
 .. |comma| replace:: ,
+.. |comma2| replace:: ``,``
 .. |br| raw:: html
 
    <br/>
+
+.. |table_start| raw:: html
+
+   <div class="table-filter">
+       <input type="text" name="query" placeholder="Search...">
+
+.. |table_end| raw:: html
+
+   </div>
 

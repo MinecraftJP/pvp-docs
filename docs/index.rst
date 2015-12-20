@@ -9,11 +9,12 @@ Welcome to Japan Minecraft PvP Documentation's documentation!
 コンテンツ:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    xml/index
    script/index
    data/index
+   rest/index
 
 .. seealso::
 
