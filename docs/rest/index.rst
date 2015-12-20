@@ -6,6 +6,11 @@ Japan Minecraft PvP APIはRESTful形式でゲームのデータをJSONレスポ�
 現在Japan Minecraft PvP APIへのアクセスには `Developer Console <https://minecraft.jp/developer/apps/>`_ よりAPIアクセスの申請を行う必要があります。
 
 
+エンドポイント
+==============
+
+エンドポイントのベースURIは ``https://pvp-api.minecraft.jp/v1/`` になります。
+
 認証
 ====
 
