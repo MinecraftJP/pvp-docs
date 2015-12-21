@@ -20,7 +20,7 @@ GET players/:id
 .. csv-table::
    :header: パラメータ, 説明
 
-   fields, レスポンスとして取得したいフィールドを指定します。  |COMMA2| 区切りで複数指定可能です。
+   fields, レスポンスとして取得したいフィールドを指定します。  |COMMA2| 区切りで複数指定可能です。 ``Optional``
 
 フィールド
 ~~~~~~~~~~
@@ -75,7 +75,7 @@ GET players/:id/punishments
 ~~~~~~~~~~
 
 .. csv-table::
-:header: パラメータ, 説明
+   :header: パラメータ, 説明
 
    max_id, 指定されたIDより小さいIDのものを返却します。レスポンスとして取得した最後のIDを指定して再度リクエストする事でページングが可能です。 ``Optional``
    limit, 取得するアイテム数を指定します。デフォルト20件、最大100件です。 ``Optional``
