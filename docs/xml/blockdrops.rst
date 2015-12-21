@@ -3,7 +3,7 @@
 
 ``<blockdrops>`` ノードを定義する事により、ブロック破壊時の挙動を変更する事が出来ます。
 
-.. code-block: xml
+.. code-block:: xml
 
    <blockdrops>
      <!-- ルール (複数可) -->
