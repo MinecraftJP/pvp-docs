@@ -1,0 +1,1079 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Japan Minecraft PvP API",
+        "termsOfService": "https://pvp.minecraft.jp/terms"
+    },
+    "tags": [
+        {
+            "name": "factions",
+            "description": "Factions data"
+        },
+        {
+            "name": "maps",
+            "description": "Maps data"
+        },
+        {
+            "name": "matches",
+            "description": "Game history"
+        },
+        {
+            "name": "players",
+            "description": "Player data"
+        },
+        {
+            "name": "punishments",
+            "description": "Punishments"
+        },
+        {
+            "name": "servers",
+            "description": "Servers"
+        }
+    ],
+    "host": "pvp-api.minecraft.jp",
+    "basePath": "/v1",
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/factions/{factionId}": {
+            "get": {
+                "tags": [
+                    "factions"
+                ],
+                "summary": "Get faction",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "factionId",
+                        "description": "Faction ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/maps": {
+            "get": {
+                "tags": [
+                    "maps"
+                ],
+                "summary": "List maps",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "max_id",
+                        "in": "query",
+                        "description": "Return map earlier than this max_id",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Count of map to return. (1-100)",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Map"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/maps/{mapId}": {
+            "get": {
+                "tags": [
+                    "maps"
+                ],
+                "summary": "Get map",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "mapId",
+                        "in": "path",
+                        "required": true,
+                        "description": "Map Id or Map name",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/Map"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/matches": {
+            "get": {
+                "tags": [
+                    "matches"
+                ],
+                "summary": "List recent matches",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "max_id",
+                        "in": "query",
+                        "description": "Return match earlier than this max_id",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Count of match to return. (1-100)",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Match"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/matches/{matchId}": {
+            "get": {
+                "tags": [
+                    "matches"
+                ],
+                "summary": "Get match",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "matchId",
+                        "description": "Match ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/Match"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/players/{playerId}": {
+            "get": {
+                "tags": [
+                    "players"
+                ],
+                "summary": "Get player",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "playerId",
+                        "description": "UUID or Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "comma-separated list of fields",
+                        "required": false,
+                        "type": "string",
+                        "enum": [
+                            "bowspeef",
+                            "cp",
+                            "ctw",
+                            "factions",
+                            "kills",
+                            "objective",
+                            "matches",
+                            "paintball",
+                            "splatt",
+                            "teampvp",
+                            "total",
+                            "tntrun"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/Player"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/punishments": {
+            "get": {
+                "tags": [
+                    "punishments"
+                ],
+                "summary": "List recent punishments",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "max_id",
+                        "in": "query",
+                        "description": "Return punishments earlier than this max_id",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Count of punishment to return. (1-100)",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Punishment"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/punishments/{punishmentId}": {
+            "get": {
+                "tags": [
+                    "punishments"
+                ],
+                "summary": "Get punishment",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "punishmentId",
+                        "description": "Punishment ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/Punishment"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/servers": {
+            "get": {
+                "tags": [
+                    "servers"
+                ],
+                "summary": "List servers",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Server"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/servers/{serverId}": {
+            "get": {
+                "tags": [
+                    "servers"
+                ],
+                "summary": "Get server",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "serverId",
+                        "description": "Server ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/Server"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        },
+        "/servers/online": {
+            "get": {
+                "tags": [
+                    "servers"
+                ],
+                "summary": "Get online players",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "x-ratelimit-limit": {
+                                "description": "The number of requests you are allowed",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-remaining": {
+                                "description": "How many requests you can make before hitting the limit.",
+                                "type": "integer"
+                            },
+                            "x-ratelimit-reset": {
+                                "description": "The next time (as a Unix timestamp) the limit will be updated.",
+                                "type": "integer"
+                            }
+                        },
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "count"
+                            ],
+                            "properties": {
+                                "count": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "client_id": []
+                    },
+                    {
+                        "minecraftjp_auth": []
+                    }
+                ]
+            }
+        }
+    },
+    "securityDefinitions": {
+        "client_id": {
+            "type": "apiKey",
+            "name": "client_id",
+            "in": "query"
+        },
+        "minecraftjp_auth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://minecraft.jp/oauth/authorize",
+            "flow": "implicit",
+            "scopes": {}
+        }
+    },
+    "definitions": {
+        "Map": {
+            "type": "object",
+            "required": [
+                "id",
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Map Id"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Map Name"
+                },
+                "proto": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "authors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MapContributor"
+                    }
+                },
+                "contributors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MapContributor"
+                    }
+                },
+                "teams": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MapTeam"
+                    }
+                },
+                "gamemodes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Map type"
+                }
+            }
+        },
+        "MapContributor": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "uuid": {
+                    "type": "string"
+                },
+                "contribution": {
+                    "type": "string"
+                }
+            }
+        },
+        "MapTeam": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "max": {
+                    "type": "integer"
+                },
+                "color": {
+                    "type": "string"
+                }
+            }
+        },
+        "Match": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "map": {
+                    "type": "string"
+                },
+                "server": {
+                    "type": "string"
+                },
+                "gamemode": {
+                    "type": "string"
+                },
+                "ranked": {
+                    "type": "boolean"
+                },
+                "win": {
+                    "type": "string"
+                },
+                "kill_count": {
+                    "type": "integer"
+                },
+                "death_count": {
+                    "type": "integer"
+                },
+                "started": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "finished": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "teams": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MatchTeam"
+                    }
+                },
+                "objectives": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MatchObjective"
+                    }
+                },
+                "permalink_url": {
+                    "type": "string"
+                }
+            }
+        },
+        "MatchTeam": {
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "score": {
+                    "type": "integer"
+                },
+                "kill_count": {
+                    "type": "integer"
+                },
+                "death_count": {
+                    "type": "integer"
+                },
+                "players": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MatchPlayer"
+                    }
+                }
+            }
+        },
+        "MatchPlayer": {
+            "required": [
+                "uuid",
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "uuid": {
+                    "type": "string"
+                },
+                "kill_count": {
+                    "type": "integer"
+                },
+                "death_count": {
+                    "type": "integer"
+                },
+                "shot_count": {
+                    "type": "integer"
+                },
+                "hit_count": {
+                    "type": "integer"
+                },
+                "paint_count": {
+                    "type": "integer"
+                }
+            }
+        },
+        "MatchObjective": {
+            "required": [
+                "player"
+            ],
+            "properties": {
+                "player": {
+                    "type": "string"
+                },
+                "team": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "string"
+                }
+            }
+        },
+        "Player": {
+            "required": [
+                "name",
+                "uuid"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "uuid": {
+                    "type": "string"
+                },
+                "last_login": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "last_logout": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "last_login_server": {
+                    "type": "string"
+                },
+                "banned": {
+                    "type": "boolean"
+                },
+                "permalink_url": {
+                    "type": "string"
+                }
+            }
+        },
+        "Punishment": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "punisher": {
+                    "$ref": "#/definitions/PunishmentPlayer"
+                },
+                "punished": {
+                    "$ref": "#/definitions/PunishmentPlayer"
+                },
+                "state": {
+                    "type": "integer"
+                },
+                "reason": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "integer"
+                },
+                "time": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "server": {
+                    "type": "string"
+                },
+                "automatic": {
+                    "type": "boolean"
+                },
+                "permalink_url": {
+                    "type": "string"
+                }
+            }
+        },
+        "PunishmentPlayer": {
+            "required": [
+                "name",
+                "uuid"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "uuid": {
+                    "type": "string"
+                }
+            }
+        },
+        "Server": {
+            "required": [
+                "id",
+                "name",
+                "region"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "region": {
+                    "type": "string"
+                },
+                "current": {
+                    "type": "integer"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "order": {
+                    "type": "integer"
+                },
+                "current_map": {
+                    "type": "string"
+                },
+                "next_map": {
+                    "type": "string"
+                },
+                "player_count": {
+                    "type": "integer"
+                },
+                "players": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "Error": {
+            "required": [
+                "error",
+                "error_description"
+            ],
+            "properties": {
+                "error": {
+                    "type": "string"
+                },
+                "error_description": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "Japan Minecraft PvP Documentation",
+        "url": "https://pvp-docs.minecraft.jp/ja/latest/rest/"
+    }
+}
