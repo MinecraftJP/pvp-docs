@@ -36,7 +36,7 @@ Japan Minecraft PvP APIはRESTful形式でゲームのデータをJSONレスポ�
 
 .. code-block:: http
 
-   GET https://pvp-api.minecraft.jp/v1/servers/?access_token={YOUR_ACCESS_TOKEN} HTTP/1.1
+   GET https://pvp-api.minecraft.jp/v1/servers?access_token={YOUR_ACCESS_TOKEN} HTTP/1.1
 
 
 Client Credentials アクセストークンの取得例
@@ -76,6 +76,9 @@ Authorization Codeによる認証時には、対象のユーザ単位で1時間�
        error: "rate_limit",
        error_description: "Rate limit exceeded"
    }
+
+アプリケーションにより多くのリクエスト数が必要な場合は、必要な理由などの詳細を記載の上 info@minecraft.jp までご連絡ください。
+
 
 現在のレート制限の状態はリクエスト時のレスポンスヘッダーに追加されます。
 
