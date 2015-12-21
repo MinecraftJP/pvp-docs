@@ -127,6 +127,7 @@ API エンドポイント
    :glob:
    :maxdepth: 1
 
+   maps
    matches
    players
    punishments
