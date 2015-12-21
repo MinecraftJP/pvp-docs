@@ -61,6 +61,42 @@ GET servers
        "players": [", "Example007", "Example1627", "Example14"]
    }]
 
+GET servers/:id
+---------------
+
+サーバを取得します。
+
+リクエスト
+~~~~~~~~~~
+
+.. code-block:: http
+
+   GET /v1/servers/:id HTTP/1.1
+
+パラメータ
+~~~~~~~~~~
+
+なし
+
+レスポンス
+~~~~~~~~~~
+
+.. code-block:: json
+
+   {
+       "id": "51ade1016d9f46031c5cfa52",
+       "name": "Sabatora",
+       "region": "us",
+       "current": 60,
+       "max": 64,
+       "icon": "diamond sword",
+       "order": 100,
+       "current_map": "Floating Box 3",
+       "next_map": "Snow Crystal",
+       "player_count": 66,
+       "players": ["Example1", "Example 2"]
+   }
+
 
 GET servers/online
 ------------------

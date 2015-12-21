@@ -14,7 +14,7 @@ Japan Minecraft PvP APIはRESTful形式でゲームのデータをJSONレスポ�
 認証
 ====
 
-全てのAPIへのリクエストにはアクセストークンまたは ``client_id`` パラメータを追加する必要があります。
+全てのAPIエンドポイントへのリクエストにはアクセストークンを送信する必要があります。
 
 利用可能な認証
 
@@ -23,16 +23,8 @@ Japan Minecraft PvP APIはRESTful形式でゲームのデータをJSONレスポ�
 
    Authorization Code, Yes, Yes, Yes
    Client Credentials, No, Yes, Yes
-   Client ID, No, No, No
 
-Client IDによるリクエスト
-
-.. code-block:: http
-
-   GET https://pvp-api.minecraft.jp/v1/servers?client_id={YOUR_CLIENT_ID} HTTP/1.1
-
-
-アクセストークンによるリクエスト(推奨)
+アクセストークンによるリクエスト
 
 .. code-block:: http
 
@@ -61,8 +53,6 @@ Client Credentials アクセストークンの取得例
 
 レート制限 (Rate Limit)
 =======================
-
-Client IDによる認証時には、アプリ単位で1時間に50リクエストを送信する事が出来ます。
 
 Client Credentialsによる認証時には、アプリ単位で1時間に100リクエストを送信する事が出来ます。
 
