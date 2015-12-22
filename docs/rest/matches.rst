@@ -103,7 +103,7 @@ GET matches/:id
 ~~~~~~~~~~
 
 .. csv-table::
-:header: パラメータ, 説明
+   :header: パラメータ, 説明
 
    fields, レスポンスとして取得したいフィールドを指定します。  |COMMA2| 区切りで複数指定可能です。 ``Optional``
 
