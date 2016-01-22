@@ -8,6 +8,7 @@
    gamemode_ctw
    gamemode_dtm
    gamemode_dtc
+   gamemode_cp
    gamemode_walls
    gamemode_blitz
    gamemode_pb
