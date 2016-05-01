@@ -6,7 +6,7 @@
 .. code-block:: xml
 
     <?xml version="1.0" encoding="utf-8"?>
-    <map proto="1.3.0">
+    <map proto="1.3.3">
         <!-- マップ名 -->
         <name>マップ名</name>
         <!-- マップバージョン -->
@@ -31,4 +31,3 @@
     ...
     -->
     </map>
-
