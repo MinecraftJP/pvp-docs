@@ -18,6 +18,7 @@
    scoreboxes
    mobs
    shops
+   broadcasts
    other
    locales
 
