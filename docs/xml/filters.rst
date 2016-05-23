@@ -48,6 +48,8 @@
    ``<kill-streak count="5"/>``, 連続キル数が特定の数または範囲で一致します。
    ``<class>class name</class>``, 特定のクラスを選択している時に一致します。
    ``<crouching/>``, しゃがんでいる時に一致します。
+   ``<walking/>``, 歩いている時に一致します。
+   ``<sprinting/>``, 走っている時に一致します。
    ``<carrying><item>item name</item></carrying>``, 特定のアイテムがインベントリに存在する時に一致します。
    ``<wearing><item>item name</item></wearing>``, 特定のアイテムを装備している時に一致します。
    ``<holding><item>item name</item></holding>``, 特定のアイテムを手に持っているときに一致します。
@@ -56,9 +58,9 @@
    ``<health min="1" max="5"/>``, 体力が指定範囲内の場合に一致します。
    ``<level min="55" max="70"/>``, レベルが指定範囲内の場合に一致します。
    ``<cause>cause</cause>``, ブロック変更の原因が特定の理由の場合に一致します。現時点で指定可能な値は ``PLAYER`` 及び ``EXPLOSION`` です。
-   ``<void/>``, ``Y=0`` のブロックが ``AIR`` の場合に一致します。
-   ``<if id="flagid"/>``, スクリプトから :doc:`Map.setFilterFlag() </script/map>` により設定されたフラグがtrueの場合に一致します。
-   ``<objective id="objective id"/>``, 特定のオブジェクティブが達成されている場合に一致します。
+   ``<void/>``, ``Y=0`` のブロックが ``AIR:0`` の場合に一致します。
+   ``<if>flag id</if>``, スクリプトから :doc:`Map.setFilterFlag() </script/map>` により設定されたフラグがtrueの場合に一致します。
+   ``<objective>objective id</objective>``, 指定のオブジェクティブが達成されている場合に一致します。
 
 連続キルフィルター
 ^^^^^^^^^^^^^^^^^^
