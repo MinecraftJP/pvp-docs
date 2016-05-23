@@ -16,13 +16,13 @@
         if (Math.random() >= 0.5) { // 1/2の確率で左側の道を塞ぐ
            for (var x = -10; x < -6; x++) {
                for (var y = 10; y < 16; y++) {
-                   match.getWorld().setBlock(x, y, 0, 'BRICK', 0);
+                   match.getWorld().getBlock(x, y, 0).setType('BRICK');
                }
            }
        } else { // 1/2の確率で右側の道を塞ぐ
            for (var x = 6; x < 10; x++) {
                for (var y = 10; y < 16; y++) {
-                   match.getWorld().setBlock(x, y, 0, 'BRICK', 0);
+                   match.getWorld().getBlock(x, y, 0).setType('BRICK');
                }
            }
        }
