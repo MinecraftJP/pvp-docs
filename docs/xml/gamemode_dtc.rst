@@ -8,8 +8,8 @@ Destroy the Coreゲームモードは相手チームのコアと呼ばれるオ�
 .. code-block:: xml
 
 	<cores material="obsidian" leak="3">
-		<core team="blue"><cuboid min="-5,73,45" max="-3,78,47"/></core>
-		<core team="red"><cuboid min="60,73,45" max="62,78,47"/></core>
+		<core id="blue-core" team="blue"><cuboid min="-5,73,45" max="-3,78,47"/></core>
+		<core id="red-core" team="red"><cuboid min="60,73,45" max="62,78,47"/></core>
 	</cores>
 
 .. csv-table:: 

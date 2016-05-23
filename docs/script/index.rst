@@ -64,5 +64,9 @@
    team
    player
    objective
+   spawn
+   region
    itemstack
+   block
+   sidebar
    eventemitter

@@ -8,8 +8,8 @@
 .. code-block:: xml
 
    <teams>
-     <team color="blue" max="24">Blue Team</team>
-     <team color="red" max="24">Red Team</team>
+     <team id="blue" color="blue" max="24">Blue Team</team>
+     <team id="red" color="dark red" max="24">Red Team</team>
    </teams>
 
 <team>ノードの属性
@@ -17,10 +17,11 @@
 
 .. csv-table::
    :header: 属性, 説明
-   :widths: 20,80
+   :widths: 10, 80, 10
 
-   ``color``, チームの色です。指定可能な色は :doc:`ChatColor </data/chatcolor>` をご覧ください。
-   ``max``, チームに参加可能な最大人数を指定します。
+   ``id``, チームをXMLとスクリプトから指定する時の名前です。, 文字列
+   ``color``, チームの色です。指定可能な色は :doc:`ChatColor </data/chatcolor>` をご覧ください。, :doc:`ChatColor </data/chatcolor>`
+   ``max``, チームに参加可能な最大人数を指定します。, 整数
 
 .. code-block:: xml
 

@@ -109,65 +109,27 @@ Worldオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
       :param Number x: X座標
       :param Number y: Y座標
       :param Number z: Z座標
-      :returns: Material(文字列), data(byte)の配列
+      :returns: :doc:`Block </script/block>`
 
       *例*
 
       .. code-block:: javascript
 
          var block = match.getWorld().getBlock(30, 64, 0);
-         console.log('座標30, 64, 0のブロックは羊毛' + (block[0] == 'WOOL' ? 'です。' : 'ではありません。'));
-
-   .. js:function:: setBlock(x, y, z, type, data)
-
-      指定座標のブロックを変更します。
-
-      :param Number x: X座標
-      :param Number y: Y座標
-      :param Number z: Z座標
-      :param String type: ブロックタイプ :doc:`Material </data/material>`
-      :param Number data: ブロックデータ
-      :returns: void
-
-      *例*
-
-      .. code-block:: javascript
+         console.log('座標30, 64, 0のブロックは羊毛' + (block.getType() == 'WOOL' ? 'です。' : 'ではありません。'));
 
          // 10, 64, 10のブロックを赤の色つきガラスに変える
-         match.getWorld().setBlock(10, 64, 10, 'STAINED_GLASS', 14);
+         var block = match.getWorld().getBlock(10, 64, 10)
+         block.setType('STAINED_GLASS');
+         block.setData(14);
 
          // 20x20の床を作る
          var world = match.getWorld();
          for (var x = 100; x < 120; x++) {
              for (var z = 100; z < 120; z++) {
-                 world.setBlock(x, 64, z, 'WOOD', 0);
+                 world.getBlock(x, 64, z).setType('WOOD');
              }
          }
-
-   .. js:function:: getSign(x, y, z)
-
-      指定座標のブロックが看板の場合に内容を取得します。
-
-      :param Number x: X座標
-      :param Number y: Y座標
-      :param Number z: Z座標
-      :returns: Array[String] ブロックが看板ではない場合はnull
-
-   .. js:function:: setSign(x, y, z, lines)
-
-      指定座標のブロックが看板の場合に内容を設定します。
-
-      :param Number x: X座標
-      :param Number y: Y座標
-      :param Number z: Z座標
-      :param Array[String] lines: 看板内容の配列
-      :returns: void
-
-      *例*
-
-      .. code-block:: javascript
-
-         match.getWorld().setSign(67, 25, 52, ['1行目', '2行目', '3行目', '4行目']);
 
    .. js:function:: playSound(x, y, z, soundName, volume, pitch)
 
@@ -303,8 +265,7 @@ Worldオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
          :header: メソッド, 戻り値, 説明
 
          getPlayer(), :doc:`Player </script/player>`, 操作したプレイヤー
-         getType(), String, 	操作したブロックの種類 (WOOD_BUTTON or STONE_BUTTON or LEVER)
-         getLocation(), Array[Number], Button, Leverのブロック座標(X, Y, Z)
+         getBlock(), :doc:`Block </script/block>`, 	操作したブロック
          getState(), Number, レバーの状態(1=ON, 0=OFF)、ボタンの場合は常に1
 
       *例*

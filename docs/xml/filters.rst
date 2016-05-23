@@ -6,7 +6,7 @@
 .. code-block:: xml
 
    <filters>
-     <filter name="filter-name">
+     <filter id="filter-name">
        <!-- 条件、修飾フィルターなど -->
      </filter>
    </filters>
@@ -39,7 +39,7 @@
 .. csv-table::
    :header: フィルター, 説明
 
-   ``<filter name="otherfilter"/>``, 他のフィルターへの参照を名前で指定します。
+   ``<filter id="otherfilter"/>``, 他のフィルターへの参照を名前で指定します。
    ``<team>team name</team>``, チームで一致します。
    ``<block>block name</block>``, ブロックタイプで一致します。指定可能なブロック名は :doc:`Material </data/material>` をご覧ください。ダメージ値を指定する事も出来ます。例:<block>sand:2</block>
    ``<spawn>spawn reason</spawn>``, スポーン理由で一致します。指定可能な値は :doc:`SpawnReason </data/spawnreason>` をご覧ください。
@@ -58,6 +58,7 @@
    ``<cause>cause</cause>``, ブロック変更の原因が特定の理由の場合に一致します。現時点で指定可能な値は ``PLAYER`` 及び ``EXPLOSION`` です。
    ``<void/>``, ``Y=0`` のブロックが ``AIR`` の場合に一致します。
    ``<if id="flagid"/>``, スクリプトから :doc:`Map.setFilterFlag() </script/map>` により設定されたフラグがtrueの場合に一致します。
+   ``<objective id="objective id"/>``, 特定のオブジェクティブが達成されている場合に一致します。
 
 連続キルフィルター
 ^^^^^^^^^^^^^^^^^^
@@ -88,7 +89,7 @@
 ^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
-   :header: 属性, 説明
+   :header: 属性, 説明, 値
    :widths: 10,80,10
 
    ``min``, ゲーム経過時間がこの値以上になっている時に一致します。, :doc:`TimePeriod </data/timeperiod>`
@@ -102,14 +103,14 @@ Voidフィルターは ``Y=0`` のブロックをチェックし、 ``AIR`` の�
 .. code-block:: xml
 
    <filters>
-     <filter name="no-void">
+     <filter id="no-void">
        <not><void/></not>
      </filter>
    </filters>
 
    <regions>
      <apply block="no-void" message="You may not modify void.">
-       <rectangle min="-oo,-oo" max="oo,oo"/>
+       <everywhere/>
      </apply>
    </regions>
 
@@ -133,7 +134,7 @@ Voidフィルターは ``Y=0`` のブロックをチェックし、 ``AIR`` の�
    <map>
        <filters>
            <!-- 手にPortal Keyアイテムを持っている or 試合開始後15分経過で一致 -->
-           <filter name="need-portal-key">
+           <filter id="need-portal-key">
                <any>
                    <holding><item name="`6Portal Key">blaze rod</item></holding>
                    <elapsed min="15m"/>
@@ -184,22 +185,22 @@ Voidフィルターは ``Y=0`` のブロックをチェックし、 ``AIR`` の�
 .. code-block:: xml
 
    <filters>
-       <filter name="only-blue" parents="deny-players deny-world deny-blocks">
+       <filter id="only-blue" parents="deny-players deny-world deny-blocks">
            <allow>
                <team>blue</team>
            </allow>
        </filter>
-       <filter name="only-red" parents="deny-players deny-world deny-blocks">
+       <filter id="only-red" parents="deny-players deny-world deny-blocks">
            <allow>
                <team>red</team>
            </allow>
        </filter>
-       <filter name="no-tnt" parents="deny-blocks">
+       <filter id="no-tnt" parents="deny-blocks">
            <deny>
                <block>tnt</block>
            </deny>
        </filter>
-       <filter name="no-dispenser" parents="deny-blocks">
+       <filter id="no-dispenser" parents="deny-blocks">
            <deny>
                <block>dispenser</block>
            </deny>

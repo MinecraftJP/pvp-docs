@@ -22,6 +22,12 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
 
       :returns: :doc:`World </script/world>`
 
+   .. js:function:: getSidebar()
+
+      :doc:`Sidebar </script/sidebar>` オブジェクトを取得します。
+
+      :returns: :doc:`Sidebar </script/sidebar>`
+
    .. js:function:: getServer()
 
       サーバ名を取得します。
@@ -52,37 +58,6 @@ Matchオブジェクトは :doc:`EventEmitter </script/eventemitter>` オブジ�
       .. code-block:: javascript
 
          match.broadcast('&6全員に表示されるメッセージです。');
-
-   .. js:function:: getTeam(id)
-
-      指定IDのチームを取得します。
-
-      :param String id: チームID
-
-      :returns: :doc:`Team </script/team>`
-
-      *例*
-
-      .. code-block:: javascript
-
-         var redTeam = match.getTeam('red-team');
-         match.end(redTeam);
-
-   .. js:function:: getTeams()
-
-      チームを取得します。
-
-      :returns: Array[ :doc:`Map </script/map>` ]
-
-      *例*
-
-      .. code-block:: javascript
-
-         var teams = match.getTeams();
-         for (var i = 0; i < teams.length; i++) {
-             var team = teams[i];
-             match.broadcast(team.getName() + ' ' + team.getPlayerCount() + '/' + team.getMax());
-         }
 
    .. js:function:: getObjectives()
 

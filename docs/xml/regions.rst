@@ -10,7 +10,7 @@
 
 .. code-block:: xml
 
-   <cuboid name="cuboid-region" min="X1,Y1,Z1" max="X2,Y2,Z2"/>
+   <cuboid id="cuboid-region" min="X1,Y1,Z1" max="X2,Y2,Z2"/>
 
 
 矩形リージョン
@@ -21,7 +21,7 @@ Y座標はチェックされません。
 
 .. code-block:: xml
 
-   <rectangle name="rectangle-region" min="X1,Z1" max="X2,Z2"/>
+   <rectangle id="rectangle-region" min="X1,Z1" max="X2,Z2"/>
 
 
 円柱リージョン
@@ -31,7 +31,7 @@ Y座標はチェックされません。
 
 .. code-block:: xml
 
-   <cylinder name="cylinder-region" base="X,Y,Z" radius="RADIUS" height="HEIGHT"/>
+   <cylinder id="cylinder-region" base="X,Y,Z" radius="RADIUS" height="HEIGHT"/>
 
 
 円形リージョン
@@ -42,7 +42,7 @@ Y座標はチェックされません。
 
 .. code-block:: xml
 
-   <circle name="circle-region" center="X,Z" radius="RADIUS"/>
+   <circle id="circle-region" center="X,Z" radius="RADIUS"/>
 
 
 ブロックリージョン
@@ -52,20 +52,74 @@ Y座標はチェックされません。
 
 .. code-block:: xml
 
-   <block name="foo">X,Y,Z</block>
+   <block id="foo">X,Y,Z</block>
+
+
+belowリージョン
+^^^^^^^^^^^^^^^
+
+指定した座標軸以下の全ての座標にマッチするリージョンを作成します。
+
+.. csv-table::
+   :header: 属性, 説明, 値
+   :widths: 10,80,10
+
+      ``x``, X軸を指定します。, Double
+      ``y``, Y軸を指定します。, Double
+      ``z``, Z軸を指定します。, Double
+
+.. code-block:: xml
+
+   <below x="60"/>
+
+aboveリージョン
+^^^^^^^^^^^^^^^
+
+指定した座標軸以上の全ての座標にマッチするリージョンを作成します。
+
+.. csv-table::
+   :header: 属性, 説明, 値
+   :widths: 10,80,10
+
+   ``x``, X軸を指定します。, Double
+   ``y``, Y軸を指定します。, Double
+   ``z``, Z軸を指定します。, Double
+
+.. code-block:: xml
+
+   <above x="60"/>
+
+everywhereリージョン
+^^^^^^^^^^^^^^^^^^^^
+
+全ての座標にマッチするリージョンです。
+
+.. code-block:: xml
+
+   <everywhere/>
+
+nowhereリージョン
+^^^^^^^^^^^^^^^^^
+
+全ての座標にマッチしないリージョンです。
+
+.. code-block:: xml
+
+   <nowhere/>
 
 
 参照リージョン
+^^^^^^^^^^^^^^
 
 他リージョンへの参照
 
 .. code-block:: xml
 
    <regions>
-     <cuboid name="region1" min="-20,60,-20" max="20,70,20"/>
+     <cuboid id="region1" min="-20,60,-20" max="20,70,20"/>
    </regions>
 
-   <region name="region1"/>
+   <region id="region1"/>
 
 リージョンへのフィルターの適用
 ------------------------------
@@ -75,7 +129,7 @@ Y座標はチェックされません。
 .. code-block:: xml
 
    <apply>
-     <region name="region1"/>
+     <region id="region1"/>
      ...
    </apply>
 
@@ -106,7 +160,7 @@ applyノードの属性
 .. code-block:: xml
 
    <negative>
-     <region name="region1"/>
+     <region id="region1"/>
    </negative>
 
 リージョンを結合
@@ -115,8 +169,8 @@ applyノードの属性
 .. code-block:: xml
 
    <union>
-     <region name="region1"/>
-     <region name="region2"/>
+     <region id="region1"/>
+     <region id="region2"/>
      ...
    </union>
 
@@ -128,8 +182,8 @@ applyノードの属性
 .. code-block:: xml
 
    <complement>
-     <region name="region1"/>
-     <region name="region2"/>
+     <region id="region1"/>
+     <region id="region2"/>
      ...
    </complement>
 
@@ -141,8 +195,20 @@ intersect
 .. code-block:: xml
 
    <intersect>
-     <region name="region1"/>
-     <region name="region2"/>
+     <region id="region1"/>
+     <region id="region2"/>
      ...
    </intersect>
+
+translateリージョン
+^^^^^^^^^^^^^^^^^^^
+
+元のリージョンから ``offset`` 属性で指定した分の座標をずらしたリージョンを作成します。
+
+.. code-block:: xml
+
+   <!-- -10,50,0のブロックリージョン -->
+   <translate offset="-20,50,0">
+       <block>10,0,0</block>
+   </translate>
 
