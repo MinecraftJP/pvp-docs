@@ -19,7 +19,7 @@ Map
 
       :returns: String
 
-       .. js:function:: getTeam(id)
+   .. js:function:: getTeam(id)
 
       指定IDのチームを取得します。
 
@@ -38,7 +38,7 @@ Map
 
       チームを取得します。
 
-      :returns: Array[ :doc:`Map </script/map>` ]
+      :returns: Array[ :doc:`Team </script/team>` ]
 
       *例*
 
