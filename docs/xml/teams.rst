@@ -46,10 +46,10 @@
       :header: サーバ名, 全チーム合計最低人数
 
       Sabatora / Sabatora 2, 48
-      Chatora / Chatora 2, 32
-      CTW, 40
-      Hachiware, 32
-      Blitz, 16
-      Walls, 24
-      Paintball, 24
+      Chatora / Chatora 2, 24
+      CTW, 32
+      Hachiware, 24
+      Blitz, 12
+      Walls, 16
+      Paintball, 16
       TNT, 24
