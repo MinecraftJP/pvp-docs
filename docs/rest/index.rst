@@ -63,9 +63,9 @@ Authorization Codeによる認証時には、対象のユーザ単位で1時間�
 .. csv-table::
    :header: 認証, 1時間あたりのリクエスト可能数, レート制限適用対象
 
-   Authorization Code, 100, User
-   Client Credentials, 100, App
-   Client ID, 50, App
+   Authorization Code, 900, User
+   Client Credentials, 900, App
+   Client ID, 600, App
 
 
 レート制限を超えるとステータスコード ``429 Too Many Requests`` と下記の内容が返されます。
