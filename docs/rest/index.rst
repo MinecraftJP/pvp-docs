@@ -65,7 +65,7 @@ Authorization Codeによる認証時には、対象のユーザ単位で1時間�
 
    Authorization Code, 900, User
    Client Credentials, 900, App
-   Client ID, 600, IP
+   Client ID, 600, IPアドレス
 
 
 レート制限を超えるとステータスコード ``429 Too Many Requests`` と下記の内容が返されます。
