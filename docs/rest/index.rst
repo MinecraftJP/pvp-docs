@@ -54,9 +54,9 @@ Client Credentials アクセストークンの取得例
 レート制限 (Rate Limit)
 =======================
 
-Client Credentialsによる認証時には、アプリ単位で1時間に100リクエストを送信する事が出来ます。
+Client Credentialsによる認証時には、アプリ単位で1時間に900リクエストを送信する事が出来ます。
 
-Authorization Codeによる認証時には、対象のユーザ単位で1時間に100リクエストを送信する事が出来ます。
+Authorization Codeによる認証時には、対象のユーザ単位で1時間に900リクエストを送信する事が出来ます。
 
 認証別のレート制限値
 
@@ -65,7 +65,7 @@ Authorization Codeによる認証時には、対象のユーザ単位で1時間�
 
    Authorization Code, 900, User
    Client Credentials, 900, App
-   Client ID, 600, App
+   Client ID, 600, IP
 
 
 レート制限を超えるとステータスコード ``429 Too Many Requests`` と下記の内容が返されます。
