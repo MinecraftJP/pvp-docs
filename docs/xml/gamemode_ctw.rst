@@ -8,7 +8,6 @@ Capture the Woolゲームモードは相手チームの陣地から羊毛を奪�
 .. code-block:: xml
 
 	<wools>
-		</wool>
         <wool team="green" color="cyan">
 			<!-- 羊毛ブロックを設置する座標 -->	
             <block>-9,24,73</block>
