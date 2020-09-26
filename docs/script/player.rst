@@ -83,7 +83,7 @@ Player
       :param Number z: Z座標
       :returns: void
 
-   .. js:function:: teleport(x, y, z)
+   .. js:function:: teleport(x, y, z, yaw, pitch)
 
       プレイヤーを指定座標にテレポートさせます。
 
